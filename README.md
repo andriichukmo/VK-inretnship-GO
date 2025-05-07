@@ -35,6 +35,8 @@ VK-inretnship-GO/
 │       └── subpub_test.go
 ├── proto/
 │   └── pubsub.proto
+├── scripts/
+│   └── setup.sh
 ├── Dockerfile
 ├── Makefile
 ├── go.mod
