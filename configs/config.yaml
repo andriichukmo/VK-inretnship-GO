@@ -1,0 +1,5 @@
+grpc:
+  port: 50051
+queue:
+  buffer: 1024
+shutdown_timeout: 5s

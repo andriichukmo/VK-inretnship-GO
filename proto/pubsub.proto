@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package serv.v1;
+
+option go_package = "github.com/andriichukmo/VK-inretnship-GO/api/serv/v1;servv1";
+
+import "google/protobuf/empty.proto";
+
+message PublishRequest { string subject = 1; bytes data = 2; }
+
+message SubscribeRequest { string subject = 1; }
+message SubscribeResponse { bytes data    = 1; }
+
+service PubSubService {
+    rpc Publish (PublishRequest) returns (google.protobuf.Empty);
+    rpc Subscribe (SubscribeRequest) returns (stream SubscribeResponse);
+    rpc Health  (google.protobuf.Empty) returns (google.protobuf.Empty);
+}
